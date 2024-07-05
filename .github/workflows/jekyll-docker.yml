@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to GitHub Pages
+name: Jekyll site CI
 
 on:
   push:
@@ -16,20 +16,7 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0' # Adjust the Ruby version as necessary
-
-    - name: Install dependencies
+    - name: Build the site in the jekyll/builder container
       run: |
-        gem install bundler
-        bundle install
-
-    - name: Build the Jekyll site
-      run: bundle exec jekyll build --future
-
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
-      with:
-        publish_dir: ./_site
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
