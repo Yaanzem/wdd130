@@ -1,0 +1,59 @@
+/* Limiting the width of the main selector */
+main {
+ width: 100%;
+ margin: 1cm auto;
+ max-width: 1200px; /* Added for better control on large screens */
+}
+
+/* Navigation styles */
+nav a {
+ background-color: blue;
+ color: white;
+ padding: 10px;
+ display: block;
+ text-decoration: none;
+ text-align: center;
+}
+
+/* Header styles */
+h1 {
+ color: rgb(18, 47, 71); /* Corrected 'colour' to 'color' */
+}
+
+/* Main image styles */
+main img {
+ width: 150px;
+ height: auto;
+ border: 1px solid steelblue;
+ padding: 2px;
+ box-shadow: 0 0 30px gray;
+}
+
+/* Paragraph styles */
+p {
+ padding: 0; 
+}
+
+/* Styles for the aside element */
+aside {
+ width: auto; /* Changed from fixed width to auto for better responsiveness */
+ margin: 1cm auto;
+ border: 1px solid rgba(0, 0, 0, 0.2);
+ padding: 1cm;
+ background-color: #eee;
+ color: #333;
+ text-align: center;
+}
+
+/* Ensuring the img inside the aside maintains its aspect ratio */
+aside img {
+ width: 200px;
+ height: auto;
+}
+
+/* Styles for the footer element */
+footer {
+ margin-top: 1cm;
+ border-top: 1px solid #000;
+ text-align: center;
+}

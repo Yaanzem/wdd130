@@ -1,90 +1,54 @@
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-/* Limiting the width of the main selector */
-main {
- width: 100%;
- margin: 1cm auto;
- max-width: 1200px; /* Added for better control on large screens */
+/* Styling for header, footer, and grid container */
+header, .grid, footer {
+ max-width: 840px;
+ margin: 0 auto;
 }
 
 /* Navigation styles */
-nav a {
- background-color: blue;
- color: white;
- padding: 10px;
- display: block;
- text-decoration: none;
- text-align: center;
-}
-
-/* Header styles */
-h1 {
- color: rgb(18, 47, 71); 
-}
-
-/* Main image styles */
-main img {
- width: 150px;
- height: auto;
- border: 1px solid steelblue;
- padding: 2px;
- box-shadow: 0 0 30px gray;
-}
-
-/* Paragraph styles */
-p {
- padding: 0; 
-}
-
-/* Styles for the aside element */
-aside {
- position: relative; /* Added for absolute positioning of child elements */
- width: auto; /* from fixed width to auto for better responsiveness */
- margin: 1cm auto;
- border: 1px solid rgba(0, 0, 0, 0.2);
- padding: 1cm;
- background-color: #eee;
- color: #333;
- text-align: center;
-}
-
-/* Ensuring the img inside the aside maintains its aspect ratio */
-aside img {
- width: 200px;
- height: auto;
-}
-
-/* Styles for the footer element */
-footer {
- margin-top: 1cm;
- border-top: 1px solid #000;
- text-align: center;
-}
-
-/* Class Selectors */
-.box {
- margin: 1rem;
+nav {
+ background-color: steelblue;
  padding: 1rem;
- border: 1px solid #ccc;
- background-color: #f0f0f0;
- color: #333;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
 }
 
-/* Float profile image to the right */
+nav a {
+ display: block;
+ padding: 0.5rem;
+ text-decoration: none;
+ font-size: 1.2rem;
+ font-weight: 700;
+ color: #fff;
+}
+
+/* Adding a bottom border to the h1 element */
+h1 {
+ border-bottom: 2px solid #000;
+}
+
+/* Grid container styles */
+.grid {
+ display: grid;
+ grid-template-columns: 1fr 3fr;
+ gap: 1rem;
+}
+main {
+ grid-column: 2/3;
+margin: 1rem;
+}
+aside {
+ width: 20rem;
+ position: relative;
+ grid-column: 1/2;
+ grid-row: 1/2;
+}
+/* Additional styles if needed */
 .profile-image {
- float: right;
- margin: 0 0 1rem 1rem;
+ border-radius: 50%;
 }
 
-/* Absolute positioning for heading in aside */
-aside h2 {
- position: absolute;
- top: 30px;
- left: 580px;
- background-color: rgba(255, 255, 255, 0.7);
- padding: 5px;
+.box {
+ list-style-type: none;
+ padding: 0;
 }
